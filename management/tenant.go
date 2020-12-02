@@ -210,7 +210,21 @@ type TenantUniversalLoginColors struct {
 	Primary *string `json:"primary,omitempty"`
 
 	// Background color of your login pages
-	PageBackground *string `json:"page_background,omitempty"`
+	PageBackground *TenantUniversalLoginColorsPageBackground `json:"page_background,omitempty"`
+}
+
+type TenantUniversalLoginColorsPageBackground struct {
+	// The type of gradient to use
+	Type *string `json:"type,omitempty"`
+
+	// Start color for gradient
+	Start *string `json:"start,omitempty"`
+
+	// End color for gradient
+	End *string `json:"end,omitempty"`
+
+	// The angle for the linear gradient
+	AngleDeg *int `json:"angle_deg,omitempty"`
 }
 
 type TenantDeviceFlow struct {

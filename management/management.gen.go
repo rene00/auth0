@@ -4121,12 +4121,12 @@ func (t *TenantUniversalLogin) String() string {
 	return Stringify(t)
 }
 
-// GetPageBackground returns the PageBackground field if it's non-nil, zero value otherwise.
-func (t *TenantUniversalLoginColors) GetPageBackground() string {
-	if t == nil || t.PageBackground == nil {
-		return ""
+// GetPageBackground returns the PageBackground field.
+func (t *TenantUniversalLoginColors) GetPageBackground() *TenantUniversalLoginColorsPageBackground {
+	if t == nil {
+		return nil
 	}
-	return *t.PageBackground
+	return t.PageBackground
 }
 
 // GetPrimary returns the Primary field if it's non-nil, zero value otherwise.
@@ -4139,6 +4139,43 @@ func (t *TenantUniversalLoginColors) GetPrimary() string {
 
 // String returns a string representation of TenantUniversalLoginColors.
 func (t *TenantUniversalLoginColors) String() string {
+	return Stringify(t)
+}
+
+// GetAngleDeg returns the AngleDeg field if it's non-nil, zero value otherwise.
+func (t *TenantUniversalLoginColorsPageBackground) GetAngleDeg() int {
+	if t == nil || t.AngleDeg == nil {
+		return 0
+	}
+	return *t.AngleDeg
+}
+
+// GetEnd returns the End field if it's non-nil, zero value otherwise.
+func (t *TenantUniversalLoginColorsPageBackground) GetEnd() string {
+	if t == nil || t.End == nil {
+		return ""
+	}
+	return *t.End
+}
+
+// GetStart returns the Start field if it's non-nil, zero value otherwise.
+func (t *TenantUniversalLoginColorsPageBackground) GetStart() string {
+	if t == nil || t.Start == nil {
+		return ""
+	}
+	return *t.Start
+}
+
+// GetType returns the Type field if it's non-nil, zero value otherwise.
+func (t *TenantUniversalLoginColorsPageBackground) GetType() string {
+	if t == nil || t.Type == nil {
+		return ""
+	}
+	return *t.Type
+}
+
+// String returns a string representation of TenantUniversalLoginColorsPageBackground.
+func (t *TenantUniversalLoginColorsPageBackground) String() string {
 	return Stringify(t)
 }
 
